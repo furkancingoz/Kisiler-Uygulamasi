@@ -85,6 +85,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="kisilerTableView" destination="ewI-e6-qnL" id="t4c-KH-SKE"/>
                         <outlet property="searchBar" destination="JS1-U7-nGY" id="gUd-9y-ntd"/>
                         <segue destination="Sfj-nx-Y3S" kind="show" identifier="toDetayVC" id="FDc-Pu-rDT"/>
                     </connections>
