@@ -15,10 +15,7 @@ class Anasayfa: UIViewController{
         super.viewDidLoad()
         searchBar.delegate = self
     }
-    @IBAction func detayButton(_ sender: Any) {
-        let kisi = Kisiler(kisiId: 1, kisiAd: "test", kisiTel: "1111")
-        performSegue(withIdentifier: "toDetayVC", sender: kisi)
-    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetayVC" {
             if let kisi = sender as? Kisiler {
