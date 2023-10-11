@@ -8,22 +8,25 @@
 import UIKit
 
 class KisiDetay: UIViewController {
-
+    @IBOutlet weak var updateName: UITextField!
+    @IBOutlet weak var updateNumber: UITextField!
+    var kisi:Kisiler?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        if let k = kisi {
+            updateName.text = k.kisiAd
+            updateNumber.text = k.kisiTel
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func updateButton(_ sender: Any) {
+        if let ka = updateName.text , let kt = updateNumber.text, let k = kisi {
+            guncelle(inputId: k.kisiId!, inputAd: ka, inputTel: kt)
+        }
     }
-    */
-
+    
+    func guncelle(inputId:Int,inputAd:String,inputTel:String){
+        print("Güncellenen: \(inputId) - \(inputAd) - \(inputTel)")
+    }
 }

@@ -8,22 +8,22 @@
 import UIKit
 
 class KisiKayit: UIViewController {
-
+    @IBOutlet weak var telefonNumarasi: UITextField!
+    @IBOutlet weak var kisiAdi: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func kaydetButton(_ sender: Any) {
+        if let ka = kisiAdi.text , let kt = telefonNumarasi.text {
+            save(inputAd: ka, inputTel: kt)
+        }
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func save(inputAd:String,inputTel:String){
+        print("Kaydedilen: \(inputAd) - \(inputTel)")
     }
-    */
 
 }
