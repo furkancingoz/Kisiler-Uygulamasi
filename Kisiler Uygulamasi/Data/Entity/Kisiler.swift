@@ -7,6 +7,7 @@
 
 import Foundation
 
+//Data modelini oluşturma
 class Kisiler {
     var kisiId:Int?
     var kisiAd:String?
